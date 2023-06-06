@@ -35,9 +35,10 @@ form.addEventListener("submit", function (e) {
 
   let arrayParticipants = [];
   for (let i = 0; i < +participants.childElementCount; ++i) {
+    arrayParticipants.sort(() => Math.random() - 0.5);
     let input = participants.children[i].firstChild.value;
     input !== "" && arrayParticipants.push(input);
-    arrayParticipants.sort(() => Math.random() - 0.5);
+    
   }
   arrayParticipants.sort(() => Math.random() - 0.5);
   let arrayPaired = combineParticipants(arrayParticipants);
@@ -47,6 +48,7 @@ form.addEventListener("submit", function (e) {
     texto += arrayPaired[i].length > 1 ? `<p>${arrayPaired[i][0]} vs ${arrayPaired[i][1]}</p>` : `<p>BYE: ${arrayPaired[i][0]}</p>`;
   }
   main.innerHTML = texto;
+  main.style.justifyContent = "center";
 });
 
 function combineParticipants(array) {
