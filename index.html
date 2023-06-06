@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sorteador de equipes</title>
+  </head>
+  <body>
+    <main>
+      <h1>Sorteador de equipes</h1>
+      <form action="#">
+        <label for="rounds">Rodadas: </label>
+        <input type="number" minlength="1" min="1" id="rounds" disabled required title="função desabilitada por enquanto" />
+        <ol class="participants"></ol>
+        <div class="button-container">
+          <input type="button" value="ADICIONAR" onclick="createNewParticipant()" class="primary" />
+          <input type="submit" value="SORTEIAR" class="secondary" />
+        </div>
+      </form>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
