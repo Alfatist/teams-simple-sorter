@@ -1,0 +1,54 @@
+.dark_mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark_mode .first_screen {
+  background-color: #222;
+}
+
+.dark_mode input[type="number"],
+.dark_mode input[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.dark_mode .second_screen {
+  background-color: #222;
+}
+
+.dark_mode .rounds li .game p {
+  color: #fff;
+}
+
+.dark_mode .rounds li .result input[type="number"],
+.dark_mode .rounds li .result .bye {
+  color: #fff;
+  background-color: #222;
+  border-color: #007bff;
+}
+
+.dark_mode .rounds .advance-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dark_mode .table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dark_mode .table tr:nth-child(even) {
+  background-color: #444;
+}
+
+.dark_mode h2,
+.dark_mode h1 {
+  color: whitesmoke;
+}
+
+.dark_mode input[disabled] {
+  background-color: #333;
+  border: none;
+}

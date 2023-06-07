@@ -24,7 +24,7 @@ body {
   width: 100%;
 }
 
-form {
+.participants_list {
   gap: 3px;
   display: flex;
   flex-direction: column;
@@ -125,7 +125,6 @@ input[type="number"] {
   margin: 0 auto;
   padding: 20px;
   background-color: #f2f2f2;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -197,6 +196,11 @@ input[type="number"] {
 
 .table tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.bye {
+  color: #999;
+  font-style: italic;
 }
 
 @media screen and (max-width: 600px) {

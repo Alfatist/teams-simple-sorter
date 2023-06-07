@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./darkMode.css" />
+    <link rel="stylesheet" href="./purpleMode.css" />
     <title>Sorteador de equipes</title>
   </head>
-  <body>
+  <body class="purple_mode">
     <main>
       <!-- <section class="first_screen">
         <h1>Sorteador de equipes</h1>
-        <form action="#">
+        <form action="" class="participants_list">
           <label for="rounds">Rodadas: </label>
           <input type="number" minlength="1" min="1" id="rounds" disabled required title="função desabilitada por enquanto" />
           <ol class="participants"></ol>
@@ -22,16 +24,17 @@
         </form>
       </section> -->
       <section class="second_screen">
-        <div class="rounds">
+        <form action="#" class="rounds">
           <h2>Rodada 1</h2>
           <ul>
-            <li>Fulano <input type="number" min="0" /> vs <input type="number" min="0" /> Ciclano</li>
-            <li>Fulano <input type="number" min="0" /> vs <input type="number" min="0" /> Ciclano</li>
-            <li>Fulano <input type="number" min="0" /> vs <input type="number" min="0" /> Ciclano</li>
+            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
+            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
+            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
+            <li>Bye: <span class="bye">beltrano</span></li>
             <!-- Adicione mais <li> para cada rodada -->
           </ul>
           <button type="submit" class="advance-button">Avançar Rodada</button>
-        </div>
+        </form>
         <div class="table">
           <table>
             <tr>
