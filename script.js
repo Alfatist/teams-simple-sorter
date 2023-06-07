@@ -38,7 +38,6 @@ form.addEventListener("submit", function (e) {
     arrayParticipants.sort(() => Math.random() - 0.5);
     let input = participants.children[i].firstChild.value;
     input !== "" && arrayParticipants.push(input);
-    
   }
   arrayParticipants.sort(() => Math.random() - 0.5);
   let arrayPaired = combineParticipants(arrayParticipants);
