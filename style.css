@@ -16,6 +16,10 @@ body {
   background-color: #f2f2f2;
 }
 
+body * {
+  transition: background-color 0.2s ease;
+}
+
 .first_screen {
   display: flex;
   align-items: center;
