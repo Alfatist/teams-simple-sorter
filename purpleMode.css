@@ -1,54 +1,51 @@
-.purple_mode {
-  background-color: #2b1c3e;
+html:has(.purple-mode:checked) body {
+  background-color: #1a0b24;
   color: #fff;
 }
 
-.purple_mode .first_screen {
-  background-color: #1a0b24;
-}
-
-.purple_mode input[type="number"],
-.purple_mode input[type="button"] {
+html:has(.purple-mode:checked) input[type="number"],
+html:has(.purple-mode:checked) button {
   background-color: #9134b8;
   color: #fff;
   border-color: #9134b8;
 }
 
-.purple_mode .second_screen {
+html:has(.purple-mode:checked) .second_screen {
   background-color: #1a0b24;
 }
 
-.purple_mode .rounds li .game p {
+html:has(.purple-mode:checked) .rounds li .game p {
   color: #fff;
 }
 
-.purple_mode .rounds li .result input[type="number"],
-.purple_mode .rounds li .result .bye {
+html:has(.purple-mode:checked) .rounds li .result input[type="number"],
+html:has(.purple-mode:checked) .rounds li .result .bye {
   color: #fff;
   background-color: #1a0b24;
   border-color: #9134b8;
 }
 
-.purple_mode .rounds .advance-button {
+html:has(.purple-mode:checked) .rounds .advance-button,
+html:has(.purple-mode:checked) .primary {
+  background-color: #9134b8 !important;
+  color: #fff;
+}
+
+html:has(.purple-mode:checked) .table th {
   background-color: #9134b8;
   color: #fff;
 }
 
-.purple_mode .table th {
-  background-color: #9134b8;
-  color: #fff;
-}
-
-.purple_mode .table tr:nth-child(even) {
+html:has(.purple-mode:checked) .table tr:nth-child(even) {
   background-color: #2b1c3e;
 }
 
-.purple_mode h2,
-.purple_mode h1 {
+html:has(.purple-mode:checked) h2,
+html:has(.purple-mode:checked) h1 {
   color: antiquewhite;
 }
 
-.purple_mode input[disabled] {
+html:has(.purple-mode:checked) input[disabled] {
   border: none;
   background-color: #2b1c3e;
 }

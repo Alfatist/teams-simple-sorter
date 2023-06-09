@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./darkMode.css" />
     <link rel="stylesheet" href="./purpleMode.css" />
+    <link rel="stylesheet" href="./orangeMode.css" />
     <title>Sorteador de equipes</title>
   </head>
-  <body class="">
-    <!--as opções de cores são: .dark_mode, .purple_mode e nenhum.-->
+  <body>
+    <!--as opções de cores são: nenhum, .dark_mode, .purple_mode e orange_mode.-->
     <main>
-      <!-- <section class="first_screen">
+      <section class="first_screen">
         <h1>Sorteador de equipes</h1>
         <form action="" class="participants_list">
           <label for="rounds">Rodadas: </label>
@@ -23,50 +24,39 @@
             <input type="submit" value="SORTEIAR" class="secondary" />
           </div>
         </form>
-      </section> -->
+      </section>
       <section class="second_screen">
         <form action="#" class="rounds">
           <h2>Rodada 1</h2>
-          <ul>
-            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
-            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
-            <li>Fulano <input type="number" min="0" required /> vs <input type="number" min="0" required /> Ciclano</li>
-            <li>Bye: <span class="bye">beltrano</span></li>
-            <!-- Adicione mais <li> para cada rodada -->
-          </ul>
-          <button type="submit" class="advance-button">Avançar Rodada</button>
+          <ul id="versus"></ul>
+          <button type="submit" class="advance-button" disabled>Avançar Rodada</button>
         </form>
         <div class="table">
-          <table>
-            <tr>
-              <th></th>
-              <th>J</th>
-              <th>V</th>
-              <th>E</th>
-              <th>D</th>
-              <th>Bye</th>
-            </tr>
-            <tr>
-              <td>Fulano</td>
-              <td>5</td>
-              <td>4</td>
-              <td>1</td>
-              <td>0</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Ciclano</td>
-              <td>4</td>
-              <td>2</td>
-              <td>2</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-
-            <!-- Adicione mais <tr> para cada linha da tabela -->
+          <table id="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>J</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>Bye</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
           </table>
         </div>
       </section>
+      <div class="theme-selector">
+        <div class="shortcut-text bye">
+          <p>ctrl +</p>
+          alt gr
+        </div>
+        <input type="radio" name="color" class="theme-circle light-mode" checked />
+        <input type="radio" name="color" class="theme-circle orange-mode" />
+        <input type="radio" name="color" class="theme-circle dark-mode" />
+        <input type="radio" name="color" class="theme-circle purple-mode" />
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>

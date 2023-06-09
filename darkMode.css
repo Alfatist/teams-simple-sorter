@@ -1,54 +1,50 @@
-.dark_mode {
-  background-color: #333;
+html:has(.dark-mode:checked) body {
+  background-color: #222;
   color: #fff;
 }
 
-.dark_mode .first_screen {
-  background-color: #222;
-}
-
-.dark_mode input[type="number"],
-.dark_mode input[type="button"] {
+html:has(.dark-mode:checked) input[type="number"],
+html:has(.dark-mode:checked) button {
   background-color: #007bff;
   color: #fff;
   border-color: #007bff;
 }
 
-.dark_mode .second_screen {
+html:has(.dark-mode:checked) .second_screen {
   background-color: #222;
 }
 
-.dark_mode .rounds li .game p {
+html:has(.dark-mode:checked) .rounds li .game p {
   color: #fff;
 }
 
-.dark_mode .rounds li .result input[type="number"],
-.dark_mode .rounds li .result .bye {
+html:has(.dark-mode:checked) .rounds li .result input[type="number"],
+html:has(.dark-mode:checked) .rounds li .result .bye {
   color: #fff;
   background-color: #222;
   border-color: #007bff;
 }
 
-.dark_mode .rounds .advance-button {
+html:has(.dark-mode:checked) .rounds .advance-button {
   background-color: #007bff;
   color: #fff;
 }
 
-.dark_mode .table th {
+html:has(.dark-mode:checked) .table th {
   background-color: #007bff;
   color: #fff;
 }
 
-.dark_mode .table tr:nth-child(even) {
+html:has(.dark-mode:checked) .table tr:nth-child(even) {
   background-color: #444;
 }
 
-.dark_mode h2,
-.dark_mode h1 {
+html:has(.dark-mode:checked) h2,
+html:has(.dark-mode:checked) h1 {
   color: whitesmoke;
 }
 
-.dark_mode input[disabled] {
+html:has(.dark-mode:checked) input[disabled] {
   background-color: #333;
   border: none;
 }

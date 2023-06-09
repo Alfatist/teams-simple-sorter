@@ -1,0 +1,41 @@
+html:has(.orange-mode:checked) body {
+  background-color: #ffc3a0;
+  color: #333;
+}
+
+html:has(.orange-mode:checked) input[type="number"],
+html:has(.orange-mode:checked) button {
+  background-color: #ff9f6d;
+  color: #fff;
+  border-color: #ff9f6d;
+}
+
+html:has(.orange-mode:checked) .second_screen {
+  background-color: #ffb787;
+}
+
+html:has(.orange-mode:checked) .rounds li .game p {
+  color: #333;
+}
+
+html:has(.orange-mode:checked) .rounds li .result input[type="number"],
+html:has(.orange-mode:checked) .rounds li .result .bye {
+  color: #333;
+  background-color: #ffb787;
+  border-color: #ff9f6d;
+}
+
+html:has(.orange-mode:checked) .rounds .advance-button,
+html:has(.orange-mode:checked) .primary {
+  background-color: #ff9f6d !important;
+  color: #fff;
+}
+
+html:has(.orange-mode:checked) .table th {
+  background-color: #ff9f6d;
+  color: #fff;
+}
+
+html:has(.orange-mode:checked) .table tr:nth-child(even) {
+  background-color: #ffdab9;
+}
