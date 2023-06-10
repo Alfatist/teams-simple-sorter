@@ -49,6 +49,10 @@ h1 {
   color: #333;
 }
 
+h2 {
+  text-align: center;
+}
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -146,9 +150,8 @@ input[type="number"] {
 }
 
 .rounds ul {
-  width: fit-content;
-  width: -moz-fit-content;
   list-style: none;
+  width: 100%;
 }
 
 .rounds li {
@@ -268,3 +271,22 @@ input[type="number"] {
 .theme-circle.light-mode {
   background-color: #fbfbfb;
 }
+
+#versus li {
+  position: relative;
+}
+
+#versus li span:not(.bye) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 4px;
+}
+
+#versus li span:nth-of-type(1) {
+  right: 100%;
+}
+#versus li span:last-child {
+  left: 100%;
+}
+/* right: 100%; */

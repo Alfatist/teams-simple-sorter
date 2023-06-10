@@ -64,11 +64,12 @@ class Player {
 function secondScreen(array = []) {
   first_screen.style.display = "none";
   second_screen.style.display = "flex";
-  console.log(array);
   let bye = array.length % 2;
   let texto = "";
   for (let i = 0; i < array.length - 1; i += 2) {
-    texto += `<li>${array[i]} <input type="number" min="0" required /> vs <input type="number" min="0" required /> ${array[i + 1]}</li>`;
+    texto += `<li><span>${array[i]}</span> <input type="number" min="0" required /> vs <input type="number" min="0" required /> <span>${
+      array[i + 1]
+    }</span></li>`;
   }
   bye ? (texto += `<li>Bye: <span class="bye">${array[array.length - 1]}</span></li>`) : null;
 
