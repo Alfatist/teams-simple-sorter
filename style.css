@@ -225,15 +225,24 @@ input[type="number"] {
 
 /* tirar depois */
 
-.theme-selector {
+.theme_selector {
   position: fixed;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translate(100%, -50%);
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  transition: all 200ms ease;
+}
+
+.theme_selector:hover {
+  transform: translate(0%, -50%) !important;
+}
+
+body:has(.sensor_selector:hover) .theme_selector {
+  transform: translate(0%, -50%) !important;
 }
 
 .shortcut-text {
@@ -288,5 +297,13 @@ input[type="number"] {
 }
 #versus li span:last-child {
   left: 100%;
+}
+
+.sensor_selector {
+  position: fixed;
+  width: 15px;
+  height: 100%;
+  right: 0;
+  top: 0;
 }
 /* right: 100%; */

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Um sorteador de torneio suíço minimalista (SEM LOGIN)" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./darkMode.css" />
     <link rel="stylesheet" href="./purpleMode.css" />
@@ -17,7 +18,7 @@
         <h1>Sorteador de equipes</h1>
         <form action="" class="participants_list">
           <label for="rounds">Rodadas: </label>
-          <input type="number" minlength="1" min="1" id="rounds" disabled required title="função desabilitada por enquanto" />
+          <input type="number" minlength="1" min="1" id="rounds" value="1" disabled required title="função desabilitada por enquanto" />
           <ol class="participants"></ol>
           <noscript>Você precisa do JavaScript para que esse sistema funcione.</noscript>
           <div class="button-container">
@@ -48,7 +49,7 @@
           </table>
         </div>
       </section>
-      <div class="theme-selector">
+      <div class="theme_selector" aria-disabled="true" aria-hidden="true">
         <div class="shortcut-text bye">
           <p>ctrl +</p>
           alt gr
@@ -58,6 +59,7 @@
         <input type="radio" name="color" class="theme-circle dark-mode" />
         <input type="radio" name="color" class="theme-circle purple-mode" />
       </div>
+      <div class="sensor_selector" onmouseover="showSelector()" onmouseout="hideSelector()"></div>
     </main>
     <script src="./script.js"></script>
   </body>

@@ -2,6 +2,18 @@ let participants = document.querySelector(".participants");
 let main = document.querySelector("main");
 let body = document.querySelector("body");
 let first_screen = document.querySelector(".first_screen");
+let theme_selector = document.querySelector(".theme_selector");
+let themes = ["", "orange_mode", "dark_mode", "purple_mode"];
+let counter = 0;
+let versus = document.querySelector("#versus");
+let second_screen = document.querySelector(".second_screen");
+let table = document.querySelector("#table");
+let form = document.querySelector("form");
+
+function trocaCor() {
+  let botao = document.querySelector(".theme-circle:checked");
+  botao.nextElementSibling ? (botao.nextElementSibling.checked = true) : (document.querySelector(".theme-circle").checked = true);
+}
 
 function createNewParticipant(buttonTrue = true) {
   let li = document.createElement("li");
@@ -27,40 +39,6 @@ function createNewParticipant(buttonTrue = true) {
   participants.appendChild(li);
 }
 
-createNewParticipant(false);
-createNewParticipant(false);
-
-const form = document.querySelector("form");
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  let rounds = +document.querySelector("#rounds").value;
-
-  let arrayParticipants = [];
-  for (let i = 0; i < +participants.childElementCount; ++i) {
-    arrayParticipants.sort(() => Math.random() - 0.5);
-    let input = participants.children[i].firstChild.value;
-    input !== "" && arrayParticipants.push(input);
-  }
-  arrayParticipants.sort(() => Math.random() - 0.5);
-
-  secondScreen(arrayParticipants);
-});
-
-let versus = document.querySelector("#versus");
-let second_screen = document.querySelector(".second_screen");
-let table = document.querySelector("#table");
-
-class Player {
-  tablePosition;
-  j;
-  v;
-  d;
-  bye;
-
-  constructor(name) {
-    this.name = name;
-  }
-}
 function secondScreen(array = []) {
   first_screen.style.display = "none";
   second_screen.style.display = "flex";
@@ -107,15 +85,49 @@ function combineParticipants(array) {
   return newArray;
 }
 
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let rounds = +document.querySelector("#rounds").value;
+
+  let arrayParticipants = [];
+  for (let i = 0; i < +participants.childElementCount; ++i) {
+    arrayParticipants.sort(() => Math.random() - 0.5);
+    let input = participants.children[i].firstChild.value;
+    input !== "" && arrayParticipants.push(input);
+  }
+  arrayParticipants.sort(() => Math.random() - 0.5);
+
+  secondScreen(arrayParticipants);
+});
+
+class Player {
+  tablePosition;
+  j;
+  v;
+  d;
+  bye;
+
+  constructor(name) {
+    this.name = name;
+  }
+}
+
 document.onkeyup = function (event) {
   if (event.key === "AltGraph" && event.ctrlKey) {
     trocaCor();
   }
 };
 
-let themes = ["", "orange_mode", "dark_mode", "purple_mode"];
-let counter = 0;
-function trocaCor() {
-  let botao = document.querySelector(".theme-circle:checked");
-  botao.nextElementSibling ? (botao.nextElementSibling.checked = true) : (document.querySelector(".theme-circle").checked = true);
+createNewParticipant(false);
+createNewParticipant(false);
+
+function showSelector() {
+  theme_selector.style.transform = "translate(0%, -50%)";
 }
+
+function hideSelector() {
+  theme_selector.style.transform = "translate(100%, -50%)";
+}
+
+showSelector();
+setTimeout(hideSelector, 2000);
