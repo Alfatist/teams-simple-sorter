@@ -27,12 +27,12 @@ html:has(.orange-mode:checked) .rounds li .result .bye {
 
 html:has(.orange-mode:checked) .rounds .advance-button,
 html:has(.orange-mode:checked) .primary {
-  background-color: #ff9f6d !important;
+  background-color: #992f00 !important;
   color: #fff;
 }
 
 html:has(.orange-mode:checked) .table th {
-  background-color: #ff9f6d;
+  background-color: #992f00;
   color: #fff;
 }
 
