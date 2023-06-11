@@ -54,12 +54,12 @@
           <p>ctrl +</p>
           alt gr
         </div>
-        <input type="radio" name="color" class="theme-circle light-mode" checked />
-        <input type="radio" name="color" class="theme-circle orange-mode" />
-        <input type="radio" name="color" class="theme-circle dark-mode" />
-        <input type="radio" name="color" class="theme-circle purple-mode" />
+        <input type="radio" name="color" class="theme-circle light-mode" tabindex="-1" checked />
+        <input type="radio" name="color" class="theme-circle orange-mode" tabindex="-1" />
+        <input type="radio" name="color" class="theme-circle dark-mode" tabindex="-1" />
+        <input type="radio" name="color" class="theme-circle purple-mode" tabindex="-1" />
       </div>
-      <div class="sensor_selector" onmouseover="showSelector()" onmouseout="hideSelector()"></div>
+      <div class="sensor_selector" onmouseover="showSelector()" onmouseout="hideSelector()" aria-disabled="true" aria-hidden="true"></div>
     </main>
     <script src="./script.js"></script>
   </body>
